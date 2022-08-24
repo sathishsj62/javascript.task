@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px solid">
+        <tr>
+            <th>product price</th>
+            <th>Unit price</th>
+            <th>Qty</th>
+            <th>Action</th>
+            <th>price</th>
+        </tr>
+        <tr>
+            <td>Headphone</td>
+            <td id="unitprice">1500</td>
+            <td> <input type="text" id="qty" value="2"></td>
+            <td id="trigger"> <button>Update Row Date</button></td>
+            <td id="price"></td>
+        </tr>
+        <!-- <tr>
+            <td>Charge</td>
+            <td>500</td>
+            <td><input type="text"></td></td>
+            <td><button>Update Row Date</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>15,000</td>
+            <td><input type="text"></td></td>
+            <td><button>Update Row Date</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>45,000</td>
+            <td><input type="text"></td></td>
+            <td><button>Update Row Date</button></td>
+            <td></td>
+        </tr> -->
+    </table>
+    <script>
+        function calculateprice() {
+            var unitprice, Qty, price,
+                unitpriceElement = document.getElementById("unitprice")
+            qtyElement = document.getElementById("qty")
+            priceElement = document.getElementById("price")
+
+            unitprice = unitpriceElement.innerText;
+            qty = qtyElement.value;
+
+            price = unitprice * qty;
+
+            priceElement.innerText = price;
+
+
+        }
+        var triggerElement = document.getElementById("trigger");
+        triggerElement.addEventListener("click",calculateprice);
+
+
+    </script>
+</body>
+
+</html>
